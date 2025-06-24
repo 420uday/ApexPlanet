@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters {
+  flex: 1 1 200px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  max-width: 250px;
+}
+
+.filters label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.products {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.product .price {
+  color: green;
+}
+
+.product .rating {
+  color: #f39c12;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .filters {
+    max-width: 100%;
+  }
+}
